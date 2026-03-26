@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>界外 OUTLAW — Instant Cream of Rice</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Noto+Sans+TC:wght@300;400;500;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor-dot"></div>
+
+  <!-- LOADER -->
+  <div class="page-loader">
+    <div class="loader-inner">
+      <span class="loader-logo">界外</span>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="#" class="logo">
+        <span class="logo-cn">界外</span>
+        <span class="logo-en">OUTLAW</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#products">Products</a></li>
+        <li><a href="#ritual">Ritual</a></li>
+        <li><a href="#philosophy">Philosophy</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="#" class="nav-cart">Cart (0)</a>
+        <button class="hamburger" aria-label="Menu">
+          <span class="ham-line"></span>
+          <span class="ham-line"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-overlay">
+    <div class="mobile-nav">
+      <ul>
+        <li><a href="#products" data-num="01">Products</a></li>
+        <li><a href="#ritual" data-num="02">Ritual</a></li>
+        <li><a href="#philosophy" data-num="03">Philosophy</a></li>
+        <li><a href="#about" data-num="04">About</a></li>
+        <li><a href="#faq" data-num="05">FAQ</a></li>
+      </ul>
+      <div class="mobile-footer">
+        <a href="#">Instagram</a>
+        <a href="#">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-visual">
+      <div class="hero-img-wrapper" data-parallax="0.15">
+        <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=1920&q=85" alt="">
+      </div>
+      <div class="hero-grain"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-title-wrap">
+        <div class="hero-line" data-reveal>
+          <span class="hero-small">即食純米糊</span>
+        </div>
+        <div class="hero-line" data-reveal>
+          <h1 class="hero-title">INSTANT</h1>
+        </div>
+        <div class="hero-line" data-reveal>
+          <h1 class="hero-title">CREAM OF <em>RICE</em></h1>
+        </div>
+      </div>
+      <div class="hero-bottom">
+        <div class="hero-cta" data-reveal>
+          <a href="#products" class="link-arrow">
+            <span>Explore</span>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          </a>
+        </div>
+        <div class="hero-scroll" data-reveal>
+          <div class="scroll-indicator">
+            <div class="scroll-dot"></div>
+          </div>
+          <span>Scroll</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="marquee-item">Balanced Nutrition</span>
+      <span class="marquee-dot">●</span>
+      <span class="marquee-item">High Dietary Fibre</span>
+      <span class="marquee-dot">●</span>
+      <span class="marquee-item">泰國茉莉香米</span>
+      <span class="marquee-dot">●</span>
+      <span class="marquee-item">No Added Sugar</span>
+      <span class="marquee-dot">●</span>
+      <span class="marquee-item">Gluten Free</span>
+      <span class="marquee-dot">●</span>
+      <span class="marquee-item">100% Natural</span>
+      <span class="marquee-dot">●</span>
+      <span class="marquee-item">Balanced Nutrition</span>
+      <span class="marquee-dot">●</span>
+      <span class="marquee-item">High Dietary Fibre</span>
+      <span class="marquee-dot">●</span>
+      <span class="marquee-item">泰國茉莉香米</span>
+      <span class="marquee-dot">●</span>
+      <span class="marquee-item">No Added Sugar</span>
+      <span class="marquee-dot">●</span>
+      <span class="marquee-item">Gluten Free</span>
+      <span class="marquee-dot">●</span>
+      <span class="marquee-item">100% Natural</span>
+      <span class="marquee-dot">●</span>
+    </div>
+  </div>
+
+  <!-- BRAND STATEMENT -->
+  <section class="brand-statement">
+    <div class="section-container">
+      <div class="statement-content" data-reveal>
+        <p class="statement-label">界外 OUTLAW</p>
+        <h2 class="statement-text">我們不做大而全的營養品牌。<br>我們只專注一件事 —<br><span class="statement-highlight">把米糊做到極致。</span></h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT IS CREAM OF RICE -->
+  <section class="explainer">
+    <div class="section-container">
+      <div class="explainer-layout">
+        <div class="explainer-left" data-reveal>
+          <p class="tag">001 — 認識米糊</p>
+          <h2 class="explainer-title">什麼是<br>Cream of Rice？</h2>
+        </div>
+        <div class="explainer-right">
+          <div class="explainer-block" data-reveal>
+            <p class="explainer-body">Cream of Rice（即食米糊）是將優質白米精細研磨而成的即食碳水化合物。在歐美健身界被譽為「完美碳水」，是許多職業運動員和健體選手的首選訓練餐。</p>
+          </div>
+          <div class="explainer-block" data-reveal>
+            <p class="explainer-body">界外選用 100% 泰國清萊府的茉莉香米，經低溫精磨工藝處理，保留米粒天然的香氣和營養。只需加入熱水攪拌，60 秒即可完成一份高質量的訓練前後碳水補給。</p>
+          </div>
+          <div class="explainer-block" data-reveal>
+            <p class="explainer-body">無麩質、無添加糖、零脂肪 — 成分表上只有一行：<strong>100% 泰國茉莉香米粉</strong>。簡單，是我們最高的追求。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RICE IMAGE STRIP -->
+  <section class="image-strip">
+    <div class="strip-img" data-parallax="0.06">
+      <img src="https://images.unsplash.com/photo-1632703272582-41359d52bfa9?w=1920&q=85&fit=crop" alt="Rice fields golden hour">
+    </div>
+    <div class="strip-overlay"></div>
+    <div class="strip-grain"></div>
+    <div class="strip-text" data-reveal>
+      <span>精選泰國茉莉香米 · 低溫精磨 · 即沖即食</span>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products" id="products">
+    <div class="products-header">
+      <div class="section-container">
+        <p class="tag" data-reveal>002 — Products</p>
+        <h2 class="products-title" data-reveal>即食純米糊系列</h2>
+        <p class="products-subtitle" data-reveal>三種口味，同一份堅持。採用泰國清萊府高地種植的茉莉香米，<br>經低溫精磨工藝製成。保留米粒天然營養，口感細滑如絲。</p>
+      </div>
+    </div>
+    <div class="products-grid">
+
+      <article class="product-card" data-reveal>
+        <a href="#" class="product-link">
+          <div class="product-visual">
+            <img src="images/product-orange.png" alt="即食純米糊 · 經典">
+            <div class="product-overlay">
+              <span class="product-cta">View Product →</span>
+            </div>
+          </div>
+          <div class="product-details">
+            <div class="product-name">
+              <h3>即食純米糊 · 經典</h3>
+              <span class="product-badge">Best Seller</span>
+            </div>
+            <p class="product-desc">原始米香，純粹口感。最適合搭配蛋白粉或堅果醬。</p>
+            <div class="product-meta">
+              <span class="product-spec">泰國茉莉香米 — 500g</span>
+              <span class="product-price">HK$128</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="product-card" data-reveal>
+        <a href="#" class="product-link">
+          <div class="product-visual">
+            <img src="images/product-green.png" alt="即食純米糊 · 抹茶">
+            <div class="product-overlay">
+              <span class="product-cta">View Product →</span>
+            </div>
+          </div>
+          <div class="product-details">
+            <div class="product-name">
+              <h3>即食純米糊 · 抹茶</h3>
+              <span class="product-badge badge-new">New</span>
+            </div>
+            <p class="product-desc">京都宇治抹茶融合茉莉香米，微苦回甘。</p>
+            <div class="product-meta">
+              <span class="product-spec">泰國茉莉香米 — 500g</span>
+              <span class="product-price">HK$138</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="product-card" data-reveal>
+        <a href="#" class="product-link">
+          <div class="product-visual">
+            <img src="images/product-gold.png" alt="即食純米糊 · 原味">
+            <div class="product-overlay">
+              <span class="product-cta">View Product →</span>
+            </div>
+          </div>
+          <div class="product-details">
+            <div class="product-name">
+              <h3>即食純米糊 · 原味</h3>
+            </div>
+            <p class="product-desc">零調味，最大自由度。你的訓練餐，由你定義。</p>
+            <div class="product-meta">
+              <span class="product-spec">泰國茉莉香米 — 500g</span>
+              <span class="product-price">HK$118</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- NUTRITION -->
+  <section class="nutrition" id="nutrition">
+    <div class="section-container">
+      <div class="nutrition-layout">
+        <div class="nutrition-left">
+          <p class="tag" data-reveal>Nutrition Facts</p>
+          <h2 class="nutrition-title" data-reveal>每一口，<br>都是計算過的。</h2>
+          <p class="nutrition-desc" data-reveal>每份 50g 的營養資料，讓你精確掌控每日攝取。</p>
+        </div>
+        <div class="nutrition-right" data-reveal>
+          <div class="nutrition-table">
+            <div class="nutri-row nutri-header">
+              <span>每份 50g</span>
+              <span>營養資料</span>
+            </div>
+            <div class="nutri-row">
+              <span>熱量</span>
+              <span>180 kcal</span>
+            </div>
+            <div class="nutri-row">
+              <span>碳水化合物</span>
+              <span>40g</span>
+            </div>
+            <div class="nutri-row">
+              <span>蛋白質</span>
+              <span>3.5g</span>
+            </div>
+            <div class="nutri-row">
+              <span>脂肪</span>
+              <span>0.5g</span>
+            </div>
+            <div class="nutri-row">
+              <span>膳食纖維</span>
+              <span>1.8g</span>
+            </div>
+            <div class="nutri-row">
+              <span>糖</span>
+              <span>0g</span>
+            </div>
+            <div class="nutri-row">
+              <span>鈉</span>
+              <span>5mg</span>
+            </div>
+          </div>
+          <p class="nutri-note">成分：100% 泰國茉莉香米粉。無添加糖、無防腐劑、無人工色素。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON -->
+  <section class="comparison">
+    <div class="section-container">
+      <div class="comparison-header">
+        <p class="tag" data-reveal>003 — 為什麼選擇米糊</p>
+        <h2 class="comparison-title" data-reveal>與其他碳水的對比</h2>
+        <p class="comparison-subtitle" data-reveal>不是所有碳水都一樣。米糊在消化速度、營養密度和便利性上，都有明顯優勢。</p>
+      </div>
+      <div class="comparison-table" data-reveal>
+        <div class="comp-row comp-header">
+          <span></span>
+          <span class="comp-highlight">界外米糊</span>
+          <span>燕麥片</span>
+          <span>白飯</span>
+          <span>番薯</span>
+        </div>
+        <div class="comp-row">
+          <span class="comp-label">消化速度</span>
+          <span class="comp-highlight">極快</span>
+          <span>中等</span>
+          <span>中等</span>
+          <span>慢</span>
+        </div>
+        <div class="comp-row">
+          <span class="comp-label">準備時間</span>
+          <span class="comp-highlight">60 秒</span>
+          <span>3-5 分鐘</span>
+          <span>20+ 分鐘</span>
+          <span>30+ 分鐘</span>
+        </div>
+        <div class="comp-row">
+          <span class="comp-label">麩質</span>
+          <span class="comp-highlight">無</span>
+          <span>含有</span>
+          <span>無</span>
+          <span>無</span>
+        </div>
+        <div class="comp-row">
+          <span class="comp-label">腸胃負擔</span>
+          <span class="comp-highlight">極低</span>
+          <span>中等</span>
+          <span>中等</span>
+          <span>中等</span>
+        </div>
+        <div class="comp-row">
+          <span class="comp-label">便攜性</span>
+          <span class="comp-highlight">極高</span>
+          <span>高</span>
+          <span>低</span>
+          <span>低</span>
+        </div>
+        <div class="comp-row">
+          <span class="comp-label">搭配自由度</span>
+          <span class="comp-highlight">極高</span>
+          <span>中等</span>
+          <span>低</span>
+          <span>低</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIFESTYLE SPLIT -->
+  <section class="split-visual">
+    <div class="split-left" data-parallax="0.08">
+      <img src="https://images.unsplash.com/photo-1673158190655-3ae71f704f28?w=960&q=85&fit=crop" alt="Rice in bowl">
+    </div>
+    <div class="split-right" data-parallax="-0.08">
+      <img src="https://images.unsplash.com/photo-1673158191177-aa03f8aa57de?w=960&q=85&fit=crop" alt="Rice grains close up">
+    </div>
+  </section>
+
+  <!-- RITUAL / HOW TO -->
+  <section class="ritual" id="ritual">
+    <div class="section-container">
+      <div class="ritual-header">
+        <p class="tag" data-reveal>004 — Ritual</p>
+        <h2 class="ritual-title" data-reveal>你的日常儀式</h2>
+        <p class="ritual-subtitle" data-reveal>三步完成你的訓練餐。簡單，是最高的追求。</p>
+      </div>
+      <div class="ritual-grid">
+        <div class="ritual-step" data-reveal>
+          <div class="step-visual">
+            <span class="step-num">01</span>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-content">
+            <h4>量取</h4>
+            <p>取 50-100g 米糊粉放入杯中。按照你的碳水需求調整份量。</p>
+          </div>
+        </div>
+        <div class="ritual-step" data-reveal>
+          <div class="step-visual">
+            <span class="step-num">02</span>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-content">
+            <h4>沖調</h4>
+            <p>加入 150-200ml 熱水，攪拌至順滑。冷水亦可，口感略有不同。</p>
+          </div>
+        </div>
+        <div class="ritual-step" data-reveal>
+          <div class="step-visual">
+            <span class="step-num">03</span>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-content">
+            <h4>自訂</h4>
+            <p>加入蛋白粉、花生醬、蜂蜜、莓果 — 打造你專屬的營養組合。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INGREDIENT SPOTLIGHT -->
+  <section class="ingredient">
+    <div class="ingredient-bg" data-parallax="0.1">
+      <img src="https://images.unsplash.com/photo-1572071623532-ac7ff711b03e?w=1920&q=85&fit=crop" alt="Golden rice fields">
+    </div>
+    <div class="ingredient-overlay"></div>
+    <div class="ingredient-grain"></div>
+    <div class="ingredient-content">
+      <div class="ingredient-inner" data-reveal>
+        <span class="ingredient-tag">Source — Thailand</span>
+        <h2 class="ingredient-title">源自泰國清萊<br>的茉莉香米</h2>
+        <p class="ingredient-desc">我們的米源自泰國北部清萊府高地。那裡海拔 600 米以上的山谷，氣候涼爽、水源純淨、土壤肥沃，賦予茉莉香米獨特的花香與甘甜。每一粒米，都經過嚴格篩選與品質把關。</p>
+        <div class="ingredient-details">
+          <div class="ingredient-detail">
+            <span class="detail-value">600m+</span>
+            <span class="detail-label">海拔高度</span>
+          </div>
+          <div class="ingredient-detail">
+            <span class="detail-value">100%</span>
+            <span class="detail-label">茉莉香米</span>
+          </div>
+          <div class="ingredient-detail">
+            <span class="detail-value">48hr</span>
+            <span class="detail-label">低溫研磨</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY / BENEFITS -->
+  <section class="philosophy" id="philosophy">
+    <div class="section-container">
+      <div class="philosophy-header">
+        <p class="tag" data-reveal>005 — Philosophy</p>
+        <h2 class="philosophy-title" data-reveal>Why Cream of Rice</h2>
+        <p class="philosophy-subtitle" data-reveal>健身人的理想碳水，不是偶然。每一個優點，都來自米糊本身的天然特性。</p>
+      </div>
+      <div class="philosophy-grid">
+        <div class="phi-card" data-reveal>
+          <span class="phi-num">01</span>
+          <h4>極速消化吸收</h4>
+          <p>米糊的精細研磨結構令其消化速度遠超一般碳水。訓練前後進食都不會造成腸胃負擔，讓能量更快到達肌肉。</p>
+        </div>
+        <div class="phi-card" data-reveal>
+          <span class="phi-num">02</span>
+          <h4>純淨零添加</h4>
+          <p>成分表只有一行：泰國茉莉香米粉。無添加糖、無麩質、無防腐劑、無人工色素。你攝取的每一克，都是真正的營養。</p>
+        </div>
+        <div class="phi-card" data-reveal>
+          <span class="phi-num">03</span>
+          <h4>靈活自由搭配</h4>
+          <p>原味米糊是一張白紙。加蛋白粉變成增肌餐、加花生醬增添口感、加莓果補充維他命 — 千變萬化，完全由你定義。</p>
+        </div>
+        <div class="phi-card" data-reveal>
+          <span class="phi-num">04</span>
+          <h4>精準碳水控制</h4>
+          <p>粉狀形態讓你可以精確量取所需份量。無論是減脂期的低碳水策略，還是增肌期的高碳水需求，都能靈活調整。</p>
+        </div>
+        <div class="phi-card" data-reveal>
+          <span class="phi-num">05</span>
+          <h4>高膳食纖維</h4>
+          <p>保留天然纖維，幫助腸道健康同時增加飽腹感。比一般精製碳水有更豐富的微量營養素。</p>
+        </div>
+        <div class="phi-card" data-reveal>
+          <span class="phi-num">06</span>
+          <h4>60 秒即食</h4>
+          <p>加水攪拌即可食用。無需煮食、無需等待。健身包裡放一包，隨時隨地補充能量。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIFESTYLE IMAGE -->
+  <section class="image-strip image-strip-short">
+    <div class="strip-img" data-parallax="0.06">
+      <img src="https://images.unsplash.com/photo-1558534949-0a442809cb33?w=1920&q=85&fit=crop" alt="Aerial rice paddy">
+    </div>
+    <div class="strip-grain"></div>
+  </section>
+
+  <!-- ABOUT / BRAND STORY -->
+  <section class="about" id="about">
+    <div class="section-container">
+      <div class="about-header">
+        <p class="tag" data-reveal>006 — Brand Story</p>
+        <h2 class="about-main-title" data-reveal>界外的故事</h2>
+      </div>
+    </div>
+    <div class="about-container">
+      <div class="about-left">
+        <h2 class="about-title" data-reveal>我們相信，<br>真正的突破來自<br>日常的堅持。</h2>
+      </div>
+      <div class="about-right" data-reveal>
+        <p>界外 OUTLAW — 不是叛逆，而是拒絕將就。</p>
+        <p>我們的創辦人是健身愛好者，經歷過無數次在備賽期間為碳水攝取煩惱的日子。白飯要煮、番薯要蒸、燕麥令腸胃不適 — 為什麼一份簡單的碳水補給要這麼麻煩？</p>
+        <p>界外的誕生，源於一個簡單的信念：訓練應該專注在訓練本身，而不是為食物準備浪費時間。我們走遍泰國北部的稻米產區，最終在清萊府的高地找到了最理想的茉莉香米。</p>
+        <p>我們不做大而全的營養品牌。只專注一件事：把米糊做到極致。從原料篩選到研磨工藝，從包裝設計到你的杯中。每個環節都經過反覆推敲，因為我們相信，真正好的產品，不需要解釋太多。</p>
+        <p>界外的名字，代表超越既有的框架。不論是訓練的瓶頸，還是對食物的既定印象。</p>
+      </div>
+    </div>
+    <div class="about-stats-section">
+      <div class="section-container">
+        <div class="about-stats">
+          <div class="stat" data-reveal>
+            <span class="stat-value" data-count="100">0</span>
+            <span class="stat-unit">%</span>
+            <span class="stat-label">天然成分</span>
+          </div>
+          <div class="stat" data-reveal>
+            <span class="stat-value" data-count="0">0</span>
+            <span class="stat-unit">g</span>
+            <span class="stat-label">添加糖</span>
+          </div>
+          <div class="stat" data-reveal>
+            <span class="stat-value" data-count="1">0</span>
+            <span class="stat-unit"></span>
+            <span class="stat-label">唯一成分</span>
+          </div>
+          <div class="stat" data-reveal>
+            <span class="stat-value" data-count="60">0</span>
+            <span class="stat-unit">秒</span>
+            <span class="stat-label">即可完成</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="section-container">
+      <div class="faq-layout">
+        <div class="faq-left">
+          <p class="tag" data-reveal>007 — FAQ</p>
+          <h2 class="faq-title" data-reveal>常見問題</h2>
+          <p class="faq-desc" data-reveal>如有其他疑問，歡迎透過 WhatsApp 或電郵聯絡我們。</p>
+        </div>
+        <div class="faq-right">
+          <div class="faq-item" data-reveal>
+            <button class="faq-question">
+              <span>米糊和蛋白粉有什麼分別？</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>蛋白粉主要提供蛋白質，而米糊主要提供碳水化合物。兩者功能不同，但可以完美搭配 — 將米糊加入蛋白粉中，就是一份營養均衡的訓練餐。</p>
+            </div>
+          </div>
+          <div class="faq-item" data-reveal>
+            <button class="faq-question">
+              <span>米糊適合什麼時候食用？</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>訓練前 30-60 分鐘或訓練後立即食用最為理想。米糊消化速度快，能迅速為身體提供能量。也可以作為早餐或正餐的碳水來源。</p>
+            </div>
+          </div>
+          <div class="faq-item" data-reveal>
+            <button class="faq-question">
+              <span>對麩質敏感的人可以食用嗎？</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>可以。我們的米糊是 100% 純米製成，完全不含麩質（Gluten Free）。適合對麩質敏感或有乳糜瀉的人士。</p>
+            </div>
+          </div>
+          <div class="faq-item" data-reveal>
+            <button class="faq-question">
+              <span>一包可以食用多少次？</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>每包 500g。以每次 50g 計算，約可食用 10 次；以每次 100g 計算，約可食用 5 次。視乎個人碳水需求而定。</p>
+            </div>
+          </div>
+          <div class="faq-item" data-reveal>
+            <button class="faq-question">
+              <span>可以用冷水沖調嗎？</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>可以。冷水沖調口感會較為稀薄，熱水沖調則更為濃稠順滑。兩種方式都不影響營養成分，可按個人喜好選擇。</p>
+            </div>
+          </div>
+          <div class="faq-item" data-reveal>
+            <button class="faq-question">
+              <span>如何存放？保質期多長？</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>請存放於陰涼乾燥處，避免陽光直射。開封後建議以密封夾封好。保質期為生產日起 12 個月，詳見包裝上的日期標示。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-inner" data-reveal>
+      <p class="cta-small">Ready to fuel your grind?</p>
+      <h2 class="cta-title">準備好突破界限</h2>
+      <a href="#products" class="btn-outline">
+        <span>Shop Now</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="contact">
+    <div class="footer-top">
+      <div class="section-container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <span class="logo-cn">界外</span>
+              <span class="logo-en">OUTLAW</span>
+            </div>
+            <p class="footer-tagline">為認真訓練的你而設</p>
+            <p class="footer-desc">界外 OUTLAW 專注為認真訓練的人提供最純淨、最方便的碳水補給。100% 泰國茉莉香米，即沖即食。</p>
+          </div>
+          <div class="footer-col">
+            <h5>Products</h5>
+            <a href="#">即食純米糊 · 經典</a>
+            <a href="#">即食純米糊 · 抹茶</a>
+            <a href="#">即食純米糊 · 原味</a>
+          </div>
+          <div class="footer-col">
+            <h5>Brand</h5>
+            <a href="#about">About</a>
+            <a href="#philosophy">Philosophy</a>
+            <a href="#ritual">Ritual</a>
+            <a href="#faq">FAQ</a>
+          </div>
+          <div class="footer-col">
+            <h5>Connect</h5>
+            <a href="#">Instagram</a>
+            <a href="#">WhatsApp</a>
+            <a href="mailto:hello@outlaw.hk">hello@outlaw.hk</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="section-container">
+        <span>&copy; 2026 界外 OUTLAW</span>
+        <span>All rights reserved</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
