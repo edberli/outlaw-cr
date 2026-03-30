@@ -178,7 +178,7 @@ const staggerObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.products-grid, .philosophy-grid, .ritual-grid').forEach(grid => {
+document.querySelectorAll('.products-grid, .philosophy-grid, .ritual-grid, .cert-grid, .coming-grid').forEach(grid => {
   staggerObserver.observe(grid);
 });
 
