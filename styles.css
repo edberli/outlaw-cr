@@ -87,14 +87,11 @@ body:hover .cursor-dot { opacity: 1; }
 
 .loader-inner { text-align: center; }
 
-.loader-logo {
-  font-family: 'Noto Sans TC', sans-serif;
-  font-size: 2rem;
-  font-weight: 900;
-  color: var(--white);
-  letter-spacing: 0.15em;
+.loader-logo-img {
+  height: 60px;
+  width: auto;
   display: block;
-  margin-bottom: 24px;
+  margin: 0 auto 24px;
 }
 
 .loader-bar {
@@ -153,31 +150,22 @@ body:hover .cursor-dot { opacity: 1; }
 
 .logo {
   display: flex;
-  align-items: baseline;
-  gap: 8px;
+  align-items: center;
 }
 
-.logo-cn {
-  font-family: 'Noto Sans TC', sans-serif;
-  font-size: 1.35rem;
-  font-weight: 900;
-  color: var(--heading);
-  transition: color 0.4s;
+.logo-img {
+  height: 40px;
+  width: auto;
+  transition: opacity 0.4s;
 }
 
-.logo-en {
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  transition: color 0.4s;
-}
+/* Default state: show black logo, hide white */
+.logo-white { display: none; }
+.logo-black { display: block; }
 
-.hero .site-header .logo-cn,
-.site-header.hero-visible .logo-cn { color: var(--white); }
-.hero .site-header .logo-en,
-.site-header.hero-visible .logo-en { color: rgba(255,255,255,0.5); }
+/* On hero: show white logo, hide black */
+.site-header.hero-visible .logo-white { display: block; }
+.site-header.hero-visible .logo-black { display: none; }
 
 .nav-links {
   display: flex;
@@ -1591,8 +1579,12 @@ body:hover .cursor-dot { opacity: 1; }
   margin-bottom: 12px;
 }
 
-.footer-logo .logo-cn { color: var(--white); }
-.footer-logo .logo-en { color: rgba(255,255,255,0.35); }
+.footer-logo-img {
+  height: 50px;
+  width: auto;
+  filter: invert(1);
+  margin-bottom: 12px;
+}
 
 .footer-brand p {
   font-size: 0.85rem;
