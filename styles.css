@@ -1586,10 +1586,10 @@ body:hover .cursor-dot { opacity: 1; }
 }
 
 .footer-logo-img {
-  height: 50px;
+  height: 160px;
   width: auto;
   filter: invert(1);
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .footer-brand p {
