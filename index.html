@@ -8,7 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
-  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=1920&q=80" fetchpriority="high">
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1761549849686-d1fd83a094aa?w=1920&q=70&fit=crop" fetchpriority="high">
+  <link rel="preconnect" href="https://cdn.pixabay.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Noto+Sans+TC:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -71,7 +72,17 @@
   <section class="hero">
     <div class="hero-visual">
       <div class="hero-img-wrapper" data-parallax="0.15">
-        <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=1920&q=80" alt="" fetchpriority="high" decoding="async" width="1920" height="1280">
+        <video
+          class="hero-video"
+          autoplay
+          loop
+          muted
+          playsinline
+          preload="metadata"
+          poster="https://images.unsplash.com/photo-1761549849686-d1fd83a094aa?w=1920&q=70&fit=crop"
+          aria-label="Golden field swaying in the summer wind">
+          <source src="https://cdn.pixabay.com/video/2025/12/28/324688_large.mp4" type="video/mp4">
+        </video>
       </div>
       <div class="hero-grain"></div>
     </div>

@@ -343,11 +343,13 @@ body:hover .cursor-dot { opacity: 1; }
   top: -10%;
 }
 
-.hero-img-wrapper img {
+.hero-img-wrapper img,
+.hero-img-wrapper .hero-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.45) contrast(1.1);
+  filter: brightness(0.55) contrast(1.05) saturate(0.92);
+  display: block;
 }
 
 .hero-grain {
