@@ -1786,3 +1786,418 @@ body:hover .cursor-dot { opacity: 1; }
   .coming-soon { padding: 80px 0; }
   .coming-grid { grid-template-columns: 1fr; }
 }
+
+/* ========== ATHLETE / TEISON PAGE ========== */
+.nav-active {
+  color: var(--heading) !important;
+  font-weight: 600;
+}
+
+/* Athlete hero */
+.athlete-hero {
+  position: relative;
+  height: 100vh;
+  min-height: 720px;
+  overflow: hidden;
+  background: var(--bg-dark);
+}
+
+.athlete-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 115%;
+  top: -7.5%;
+}
+
+.athlete-hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  filter: contrast(1.05) saturate(0.92);
+}
+
+.athlete-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.55) 0%,
+    rgba(0,0,0,0.25) 35%,
+    rgba(0,0,0,0.55) 75%,
+    rgba(0,0,0,0.85) 100%
+  );
+  pointer-events: none;
+}
+
+.athlete-hero-grain {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.athlete-hero-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 0 80px;
+  z-index: 2;
+  color: var(--white);
+}
+
+.athlete-tag {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 28px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s var(--ease-out), transform 1s var(--ease-out);
+}
+
+.athlete-tag.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.athlete-hero-title {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 36px;
+  line-height: 0.95;
+}
+
+.athlete-hero-line {
+  display: block;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  color: rgba(255,255,255,0.85);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.1s var(--ease-out), transform 1.1s var(--ease-out);
+}
+
+.athlete-hero-line:nth-child(2) { transition-delay: 0.15s; }
+
+.athlete-hero-line.revealed,
+.athlete-hero-title.revealed .athlete-hero-line,
+[data-reveal].revealed .athlete-hero-line {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.athlete-hero-name {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 900;
+  font-size: clamp(4rem, 13vw, 11rem);
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.athlete-hero-subtitle {
+  max-width: 620px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: clamp(0.9rem, 1.1vw, 1rem);
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.02em;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s var(--ease-out) 0.3s, transform 1s var(--ease-out) 0.3s;
+}
+
+.athlete-hero-subtitle.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Pull quote */
+.athlete-quote {
+  padding: 160px 0 140px;
+  background: var(--bg);
+  position: relative;
+}
+
+.quote-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+  position: relative;
+}
+
+.quote-mark {
+  display: block;
+  font-family: 'Archivo', serif;
+  font-size: clamp(7rem, 14vw, 12rem);
+  line-height: 0.7;
+  color: var(--accent);
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+.quote-body {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: clamp(1.4rem, 2.4vw, 2.1rem);
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--heading);
+  letter-spacing: -0.005em;
+  margin: 0 0 48px;
+  padding: 0;
+  border: none;
+  quotes: none;
+}
+
+.quote-body em {
+  font-style: normal;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.quote-attribution {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-left: 28px;
+  border-left: 2px solid var(--accent);
+}
+
+.quote-name {
+  font-family: 'Archivo', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--heading);
+  letter-spacing: -0.01em;
+}
+
+.quote-role {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* Awards */
+.athlete-awards {
+  padding: 140px 0;
+  background: var(--surface);
+}
+
+.awards-header {
+  margin-bottom: 80px;
+  max-width: 720px;
+}
+
+.awards-title {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--heading);
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+
+.awards-subtitle {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  max-width: 480px;
+}
+
+.awards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.award-row {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  align-items: center;
+  gap: 32px;
+  padding: 28px 4px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  transition: background 0.4s var(--ease-out), padding 0.4s var(--ease-out);
+}
+
+.award-row:hover {
+  background: rgba(255,255,255,0.5);
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.award-medal {
+  font-family: 'Archivo', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1;
+}
+
+.award-medal.award-gold,
+.award-medal.award-silver,
+.award-medal.award-bronze {
+  font-size: 2rem;
+}
+
+.award-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.award-event {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+  font-weight: 600;
+  color: var(--heading);
+  letter-spacing: -0.005em;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.award-meta {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.award-place {
+  font-family: 'Archivo', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+/* Why OUTLAW */
+.athlete-why {
+  padding: 140px 0;
+  background: var(--bg);
+}
+
+.why-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 100px;
+  align-items: start;
+}
+
+.why-title {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--heading);
+  line-height: 1.2;
+  margin-top: 16px;
+}
+
+.why-right {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.why-block {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 32px;
+  align-items: start;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.why-block:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.why-num {
+  font-family: 'Archivo', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 200;
+  color: var(--accent);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.why-block h4 {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--heading);
+  margin: 0 0 14px;
+  line-height: 1.3;
+}
+
+.why-block p {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--text);
+  margin: 0;
+}
+
+/* Athlete page mobile */
+@media (max-width: 1024px) {
+  .why-layout {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+  .athlete-hero { min-height: 600px; height: 90vh; }
+  .athlete-hero-content { padding: 0 0 56px; }
+  .athlete-hero-img img { object-position: center 25%; }
+
+  .athlete-quote { padding: 100px 0 80px; }
+  .quote-body { font-size: 1.2rem; }
+  .quote-attribution { padding-left: 20px; }
+
+  .athlete-awards { padding: 80px 0; }
+  .awards-header { margin-bottom: 48px; }
+
+  .award-row {
+    grid-template-columns: 56px 1fr;
+    gap: 20px;
+    padding: 24px 0;
+  }
+
+  .award-place {
+    grid-column: 2;
+    margin-top: 4px;
+    font-size: 0.72rem;
+  }
+
+  .award-row:hover {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .athlete-why { padding: 80px 0; }
+
+  .why-block {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
