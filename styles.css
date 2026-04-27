@@ -1990,6 +1990,69 @@ body:hover .cursor-dot { opacity: 1; }
   color: var(--text-muted);
 }
 
+/* Competition stage strip */
+.athlete-strip {
+  position: relative;
+  height: 70vh;
+  min-height: 480px;
+  overflow: hidden;
+  background: var(--bg-dark);
+}
+
+.athlete-strip-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 115%;
+  top: -7.5%;
+}
+
+.athlete-strip-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  filter: contrast(1.05) saturate(0.9);
+}
+
+.athlete-strip-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.35) 0%,
+    rgba(0,0,0,0.15) 40%,
+    rgba(0,0,0,0.55) 100%
+  );
+  pointer-events: none;
+}
+
+.athlete-strip-grain {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.athlete-strip-text {
+  position: absolute;
+  bottom: 36px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 2;
+}
+
+.athlete-strip-text span {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+}
+
 /* Awards */
 .athlete-awards {
   padding: 140px 0;
@@ -2173,6 +2236,8 @@ body:hover .cursor-dot { opacity: 1; }
   .athlete-quote { padding: 100px 0 80px; }
   .quote-body { font-size: 1.2rem; }
   .quote-attribution { padding-left: 20px; }
+
+  .athlete-strip { height: 55vh; min-height: 380px; }
 
   .athlete-awards { padding: 80px 0; }
   .awards-header { margin-bottom: 48px; }
