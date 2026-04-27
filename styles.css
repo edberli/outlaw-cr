@@ -2714,45 +2714,10 @@ body:hover .cursor-dot { opacity: 1; }
   pointer-events: none;
 }
 
-.float-card[hidden] {
-  display: none;
-}
-
 .float-card.shown {
   opacity: 1;
   transform: translateY(0) scale(1);
   pointer-events: auto;
-}
-
-.float-card.dismissing {
-  opacity: 0;
-  transform: translateY(24px) scale(0.96);
-  pointer-events: none;
-}
-
-.float-card-close {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  z-index: 2;
-  width: 28px;
-  height: 28px;
-  border: none;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  color: var(--text-muted);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  transition: background 0.2s var(--ease-out), color 0.2s var(--ease-out);
-}
-
-.float-card-close:hover {
-  background: var(--heading);
-  color: var(--white);
 }
 
 .float-card-link {
