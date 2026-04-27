@@ -198,8 +198,10 @@ document.querySelectorAll('.faq-question').forEach(btn => {
 });
 
 // ========== HEADER COLORS ON HERO ==========
+const heroEl = document.querySelector('.hero');
 function updateHeaderColors() {
-  const heroBottom = document.querySelector('.hero').getBoundingClientRect().bottom;
+  if (!heroEl) return;
+  const heroBottom = heroEl.getBoundingClientRect().bottom;
   const isOverHero = heroBottom > 80;
 
   const links = header.querySelectorAll('.nav-links a, .nav-cart');
@@ -215,4 +217,34 @@ function updateHeaderColors() {
 
   requestAnimationFrame(updateHeaderColors);
 }
-updateHeaderColors();
+if (heroEl) updateHeaderColors();
+
+// ========== FLOATING NEW-FLAVOR TEASER CARD ==========
+const floatCard = document.getElementById('floatCard');
+if (floatCard) {
+  const FLOAT_CARD_KEY = 'outlaw-float-card-chocolate-dismissed';
+  const dismissed = (() => {
+    try { return localStorage.getItem(FLOAT_CARD_KEY) === '1'; } catch { return false; }
+  })();
+
+  if (!dismissed) {
+    // Show after a short delay so the hero gets the spotlight first
+    setTimeout(() => {
+      floatCard.removeAttribute('hidden');
+      // double rAF to allow display change to settle before animating
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        floatCard.classList.add('shown');
+      }));
+    }, 2400);
+
+    const closeBtn = floatCard.querySelector('.float-card-close');
+    closeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      floatCard.classList.remove('shown');
+      floatCard.classList.add('dismissing');
+      try { localStorage.setItem(FLOAT_CARD_KEY, '1'); } catch {}
+      setTimeout(() => floatCard.setAttribute('hidden', ''), 700);
+    });
+  }
+}
