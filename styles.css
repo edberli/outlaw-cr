@@ -2451,15 +2451,15 @@ body:hover .cursor-dot { opacity: 1; }
   height: 100%;
   object-fit: cover;
   object-position: center center;
-  /* Heavy editorial B&W treatment: pushes messy backgrounds into deep shadow,
-     unifies tone across both photos, evokes premium fine-art photography. */
-  filter: grayscale(1) contrast(1.18) brightness(0.78);
+  /* Color treatment: slight desaturation + contrast lift for premium
+     editorial look while keeping skin tones natural. */
+  filter: saturate(0.88) contrast(1.08) brightness(0.92);
   transition: transform 1.6s var(--ease-out), filter 1.6s var(--ease-out);
 }
 
 .transform-card:hover .transform-img img {
   transform: scale(1.03);
-  filter: grayscale(0.85) contrast(1.22) brightness(0.85);
+  filter: saturate(1) contrast(1.12) brightness(0.96);
 }
 
 /* Strong vignette — radial shadow pushes attention to body, hides background */
