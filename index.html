@@ -7,7 +7,9 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Noto+Sans+TC:wght@300;400;500;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=1920&q=80" fetchpriority="high">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Noto+Sans+TC:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -17,7 +19,7 @@
   <!-- LOADER -->
   <div class="page-loader">
     <div class="loader-inner">
-      <img src="images/logo-white.png" alt="界外" class="loader-logo-img">
+      <img src="images/logo-white.webp" alt="界外" class="loader-logo-img">
       <div class="loader-bar"><div class="loader-fill"></div></div>
     </div>
   </div>
@@ -26,8 +28,8 @@
   <header class="site-header">
     <nav class="nav-container">
       <a href="#" class="logo">
-        <img src="images/logo-white.png" alt="界外 OUTLAW" class="logo-img logo-white">
-        <img src="images/logo-black.png" alt="界外 OUTLAW" class="logo-img logo-black">
+        <img src="images/logo-white.webp" alt="界外 OUTLAW" class="logo-img logo-white">
+        <img src="images/logo-black.webp" alt="界外 OUTLAW" class="logo-img logo-black">
       </a>
       <ul class="nav-links">
         <li><a href="#products">Products</a></li>
@@ -69,7 +71,7 @@
   <section class="hero">
     <div class="hero-visual">
       <div class="hero-img-wrapper" data-parallax="0.15">
-        <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=1920&q=85" alt="">
+        <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=1920&q=80" alt="" fetchpriority="high" decoding="async" width="1920" height="1280">
       </div>
       <div class="hero-grain"></div>
     </div>
@@ -168,7 +170,7 @@
   <!-- RICE IMAGE STRIP -->
   <section class="image-strip">
     <div class="strip-img" data-parallax="0.06">
-      <img src="https://images.unsplash.com/photo-1632703272582-41359d52bfa9?w=1920&q=85&fit=crop" alt="Rice fields golden hour">
+      <img src="https://images.unsplash.com/photo-1632703272582-41359d52bfa9?w=1600&q=75&fit=crop" alt="Rice fields golden hour" loading="lazy" decoding="async" width="1600" height="900">
     </div>
     <div class="strip-overlay"></div>
     <div class="strip-grain"></div>
@@ -191,7 +193,7 @@
       <article class="product-card" data-reveal>
         <a href="#" class="product-link">
           <div class="product-visual">
-            <img src="images/product-orange.png" alt="即食純米糊 · 經典">
+            <img src="images/product-orange.webp" alt="即食純米糊 · 經典" loading="lazy" decoding="async" width="800" height="1000">
             <div class="product-overlay">
               <span class="product-cta">View Product →</span>
             </div>
@@ -213,7 +215,7 @@
       <article class="product-card" data-reveal>
         <a href="#" class="product-link">
           <div class="product-visual">
-            <img src="images/product-green.png" alt="即食純米糊 · 抹茶">
+            <img src="images/product-green.webp" alt="即食純米糊 · 抹茶" loading="lazy" decoding="async" width="800" height="1000">
             <div class="product-overlay">
               <span class="product-cta">View Product →</span>
             </div>
@@ -235,7 +237,7 @@
       <article class="product-card" data-reveal>
         <a href="#" class="product-link">
           <div class="product-visual">
-            <img src="images/product-gold.png" alt="即食純米糊 · 原味">
+            <img src="images/product-gold.webp" alt="即食純米糊 · 原味" loading="lazy" decoding="async" width="800" height="1000">
             <div class="product-overlay">
               <span class="product-cta">View Product →</span>
             </div>
@@ -369,7 +371,7 @@
         loop
         muted
         playsinline
-        preload="metadata"
+        preload="none"
         poster="https://images.unsplash.com/photo-1761549849686-d1fd83a094aa?w=1920&q=70&fit=crop"
         aria-label="Golden grain field swaying in the wind">
         <source src="https://cdn.pixabay.com/video/2018/07/14/17285-280038627_large.mp4" type="video/mp4">
@@ -425,7 +427,7 @@
   <!-- INGREDIENT SPOTLIGHT -->
   <section class="ingredient">
     <div class="ingredient-bg" data-parallax="0.1">
-      <img src="https://images.unsplash.com/photo-1572071623532-ac7ff711b03e?w=1920&q=85&fit=crop" alt="Golden rice fields">
+      <img src="https://images.unsplash.com/photo-1572071623532-ac7ff711b03e?w=1600&q=75&fit=crop" alt="Golden rice fields" loading="lazy" decoding="async" width="1600" height="900">
     </div>
     <div class="ingredient-overlay"></div>
     <div class="ingredient-grain"></div>
@@ -551,7 +553,7 @@
 
       <a href="teison.html" class="endorsement-card" data-reveal>
         <div class="endorsement-visual">
-          <img src="images/teison.jpg" alt="健美金牌教練 Teison 手持冠軍獎座">
+          <img src="images/teison.webp" alt="健美金牌教練 Teison 手持冠軍獎座" loading="lazy" decoding="async" width="630" height="852">
           <div class="endorsement-badge">
             <span>2025 Champion</span>
           </div>
@@ -582,7 +584,7 @@
   <!-- LIFESTYLE IMAGE -->
   <section class="image-strip image-strip-short">
     <div class="strip-img" data-parallax="0.06">
-      <img src="https://images.unsplash.com/photo-1558534949-0a442809cb33?w=1920&q=85&fit=crop" alt="Aerial rice paddy">
+      <img src="https://images.unsplash.com/photo-1558534949-0a442809cb33?w=1600&q=75&fit=crop" alt="Aerial rice paddy" loading="lazy" decoding="async" width="1600" height="900">
     </div>
     <div class="strip-grain"></div>
   </section>
@@ -766,7 +768,7 @@
         <div class="footer-grid">
           <div class="footer-brand">
             <div class="footer-logo">
-              <img src="images/logo-black.png" alt="界外 OUTLAW" class="footer-logo-img">
+              <img src="images/logo-black.webp" alt="界外 OUTLAW" class="footer-logo-img">
             </div>
             <p class="footer-tagline">為認真訓練的你而設</p>
             <p class="footer-desc">界外 OUTLAW 專注為認真訓練的人提供最純淨、最方便的碳水補給。100% 泰國茉莉香米，即沖即食。</p>
@@ -801,6 +803,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

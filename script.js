@@ -3,8 +3,8 @@ window.addEventListener('load', () => {
   setTimeout(() => {
     document.querySelector('.page-loader').classList.add('done');
     // Trigger hero reveal after loader
-    setTimeout(revealHero, 200);
-  }, 1400);
+    setTimeout(revealHero, 150);
+  }, 700);
 });
 
 function revealHero() {
