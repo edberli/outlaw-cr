@@ -972,11 +972,13 @@ body:hover .cursor-dot { opacity: 1; }
   top: -10%;
 }
 
-.split-img img {
+.split-img img,
+.split-img .split-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: contrast(1.05) saturate(0.92);
+  display: block;
 }
 
 .split-overlay {
