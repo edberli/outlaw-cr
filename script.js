@@ -219,11 +219,4 @@ function updateHeaderColors() {
 }
 if (heroEl) updateHeaderColors();
 
-// ========== FLOATING NEW-FLAVOR TEASER CARD (persistent) ==========
-const floatCard = document.getElementById('floatCard');
-if (floatCard) {
-  // Slide in once on load, then stay there. No dismiss.
-  setTimeout(() => {
-    floatCard.classList.add('shown');
-  }, 1000);
-}
+// Floating new-flavor teaser card — pure CSS animation, no JS needed.
