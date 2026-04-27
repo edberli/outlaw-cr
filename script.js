@@ -220,3 +220,47 @@ function updateHeaderColors() {
 if (heroEl) updateHeaderColors();
 
 // Floating new-flavor teaser card — pure CSS animation, no JS needed.
+
+// ========== AUTOPLAY VIDEO WATCHDOG ==========
+// Browsers pause muted autoplay videos in several situations: when the
+// tab loses focus, when the video scrolls out of view for a while,
+// when the OS is in low-power mode, etc. Force them to keep playing.
+(() => {
+  const videos = Array.from(document.querySelectorAll('video[autoplay]'));
+  if (!videos.length) return;
+
+  const tryPlay = (v) => {
+    if (!v.paused) return;
+    const p = v.play();
+    if (p && typeof p.catch === 'function') p.catch(() => { /* swallowed: autoplay policy */ });
+  };
+
+  const inView = (v) => {
+    const r = v.getBoundingClientRect();
+    return r.bottom > 0 && r.top < window.innerHeight;
+  };
+
+  // Resume any in-view video when tab becomes visible
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) return;
+    videos.forEach(v => { if (inView(v)) tryPlay(v); });
+  });
+
+  // Re-trigger play whenever a video scrolls into view
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) tryPlay(e.target);
+    });
+  }, { threshold: 0.1 });
+  videos.forEach(v => io.observe(v));
+
+  // Hook the pause event itself: if the video pauses for any reason
+  // while it's still in view, immediately try to resume.
+  videos.forEach(v => {
+    v.addEventListener('pause', () => {
+      // Only resume if it wasn't a deliberate end-of-clip + non-loop case
+      if (v.ended && !v.loop) return;
+      if (inView(v)) requestAnimationFrame(() => tryPlay(v));
+    });
+  });
+})();
