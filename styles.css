@@ -1787,6 +1787,199 @@ body:hover .cursor-dot { opacity: 1; }
   .coming-grid { grid-template-columns: 1fr; }
 }
 
+/* ========== ENDORSEMENT CARD (homepage) ========== */
+.endorsement {
+  padding: 140px 0;
+  background: var(--bg);
+}
+
+.endorsement-header {
+  margin-bottom: 60px;
+  max-width: 720px;
+}
+
+.endorsement-section-title {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--heading);
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.endorsement-section-subtitle {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  max-width: 520px;
+}
+
+.endorsement-card {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  background: var(--surface);
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.endorsement-visual {
+  position: relative;
+  overflow: hidden;
+  min-height: 600px;
+  background: var(--bg-dark);
+}
+
+.endorsement-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 28%;
+  filter: contrast(1.05) saturate(0.92);
+  transition: transform 1.4s var(--ease-out);
+}
+
+.endorsement-card:hover .endorsement-visual img {
+  transform: scale(1.05);
+}
+
+.endorsement-badge {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  background: var(--bg-dark);
+  color: var(--white);
+  padding: 9px 16px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 500;
+  z-index: 2;
+}
+
+.endorsement-content {
+  padding: 72px 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  justify-content: center;
+}
+
+.endorsement-name {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  line-height: 1;
+}
+
+.endorsement-name-zh {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.endorsement-name-en {
+  display: block;
+  font-family: 'Archivo', sans-serif;
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: var(--heading);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.endorsement-quote {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: clamp(0.95rem, 1.15vw, 1.05rem);
+  line-height: 1.85;
+  color: var(--text);
+  font-weight: 400;
+  border-left: 2px solid var(--accent);
+  padding: 4px 0 4px 22px;
+  margin: 0;
+  font-style: normal;
+}
+
+.endorsement-quote em {
+  font-style: normal;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.endorsement-awards {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  padding-top: 22px;
+}
+
+.endorsement-awards li {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 0.85rem;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  letter-spacing: 0.01em;
+}
+
+.aw-medal {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.endorsement-awards li.aw-more {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 4px;
+  padding-left: 28px;
+}
+
+.endorsement-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--heading);
+  margin-top: 8px;
+  align-self: flex-start;
+  transition: gap 0.4s var(--ease-out), color 0.3s var(--ease-out);
+  border-bottom: 1px solid var(--heading);
+  padding-bottom: 6px;
+}
+
+.endorsement-card:hover .endorsement-cta {
+  gap: 18px;
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.endorsement-cta svg {
+  transition: transform 0.4s var(--ease-out);
+}
+
+.endorsement-card:hover .endorsement-cta svg {
+  transform: translate(2px, -2px);
+}
+
 /* ========== ATHLETE / TEISON PAGE ========== */
 .nav-active {
   color: var(--heading) !important;
@@ -2240,6 +2433,12 @@ body:hover .cursor-dot { opacity: 1; }
   .athlete-hero { min-height: 600px; height: 90vh; }
   .athlete-hero-content { padding: 0 0 56px; }
   .athlete-hero-img img { object-position: center 25%; }
+
+  .endorsement { padding: 80px 0; }
+  .endorsement-header { margin-bottom: 36px; }
+  .endorsement-card { grid-template-columns: 1fr; }
+  .endorsement-visual { min-height: 380px; aspect-ratio: 4 / 5; }
+  .endorsement-content { padding: 40px 24px; gap: 22px; }
 
   .athlete-quote { padding: 100px 0 80px; }
   .quote-body { font-size: 1.2rem; }

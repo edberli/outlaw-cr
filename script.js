@@ -36,7 +36,7 @@ function updateCursor() {
 updateCursor();
 
 // Cursor hover effect on interactive elements
-document.querySelectorAll('a, button, .product-card').forEach(el => {
+document.querySelectorAll('a, button, .product-card, .endorsement-card').forEach(el => {
   el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
   el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
 });
